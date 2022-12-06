@@ -92,6 +92,19 @@ p {
   margin-bottom: 1rem;
 }
 
+#addy {
+  color: #FAD02C;
+}
+
+#addy::selection{
+  color: cyan;
+}
+
+h6::selection{
+  color: #FAD02C;
+  background: dimgrey;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
