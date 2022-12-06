@@ -1,6 +1,6 @@
 var chimpers = null;
 var contract = null;
-const ChimpsAddress = "TBA";
+const ChimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
 
 document.getElementById('mmwallet').onclick = async () => {
     if (window.ethereum){
