@@ -18,7 +18,7 @@ document.getElementById('mmwallet').onclick = async () => {
         document.getElementById('oldApproval').onclick = async () => {
             var content = "requesting approval for all oldChimps";
             $("#chimpspan").html(content);
-            oldChimpsNFT.methods.setApprovalForAll().send({ from: chimpers })
+            oldChimpsNFT.methods.setApprovalForAll("0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026", true).send({ from: chimpers })
             .then(function (receipt) {
                 console.log(receipt);
                 var content = "approved oldChimps!:)";
