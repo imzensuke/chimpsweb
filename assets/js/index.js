@@ -1,6 +1,6 @@
 var chimpers = null;
 var contract = null;
-const ChimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
+const chimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
 const oldChimpsAddress = "0xDB89785426FCcded4C2A24EB6De11c964179561c";
 
 document.getElementById('mmwallet').onclick = async () => {
@@ -11,7 +11,7 @@ document.getElementById('mmwallet').onclick = async () => {
         chimpers = accounts[0];
         document.getElementById('mmwallet').textContent = "Connected";
         document.getElementById('addy').textContent = chimpers;
-        chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, ChimpsAddress);
+        chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, chimpsAddress);
         oldChimpsNFT = new web3.eth.Contract(oldChimpsAbi, oldChimpsAddress);
         
         // take approval for oldChimps
