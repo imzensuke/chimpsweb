@@ -15,7 +15,7 @@ document.getElementById('mmwallet').onclick = async () => {
         oldChimpsNFT = new web3.eth.Contract(oldChimpsAbi, oldChimpsAddress);
         
         // take approval for oldChimps
-        document.getElementById('oldApproval').onclick = async () => {
+        document.getElementById('oldApprove').onclick = async () => {
             var content = "requesting approval for all oldChimps";
             $("#chimpspan").html(content);
             oldChimpsNFT.methods.setApprovalForAll("0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026", true).send({ from: chimpers })
