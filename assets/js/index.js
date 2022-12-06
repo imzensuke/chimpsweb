@@ -1,6 +1,7 @@
 var chimpers = null;
 var contract = null;
 const ChimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
+const oldChimpsAddress = "0xDB89785426FCcded4C2A24EB6De11c964179561c";
 
 document.getElementById('mmwallet').onclick = async () => {
     if (window.ethereum){
@@ -11,17 +12,30 @@ document.getElementById('mmwallet').onclick = async () => {
         document.getElementById('mmwallet').textContent = "Connected";
         document.getElementById('addy').textContent = chimpers;
         chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, ChimpsAddress);
-
+        oldChimpsNFT = new web3.eth.Contract(oldChimpsAbi, oldChimpsAddress);
+        
+        // take approval for oldChimps
+        document.getElementById('oldApproval').onclick = async () => {
+            var content = "requesting approval for all oldChimps";
+            $("#chimpspan").html(content);
+            oldChimpsNFT.methods.setApprovalForAll().send({ from: chimpers })
+            .then(function (receipt) {
+                console.log(receipt);
+                var content = "approved oldChimps!:)";
+                $("#chimpspan").html(content);
+            });;
+        }
+        
         // remint nfts...
         document.getElementById('remint').onclick = async () => {
             var content = "requesting remint from: ";
             content += chimpers;
-            $("").html(content);
+            $("#chimpspan").html(content);
             chimpsNFT.methods.mintOwners().send({ from: chimpers, gasPrice: 258000000000 })
             .then(function (receipt) {
                 console.log(receipt);
                 var content = "reminted 25 chimps!:) ";
-                $("").html(content);
+                $("#chimpspan").html(content);
             });;
         }
     }
