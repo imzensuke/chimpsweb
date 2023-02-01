@@ -14,18 +14,6 @@ document.getElementById('mmwallet').onclick = async () => {
         chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, chimpsAddress);
         oldChimpsNFT = new web3.eth.Contract(oldChimpsAbi, oldChimpsAddress);
         
-        // take approval for oldChimps
-        document.getElementById('oldApprove').onclick = async () => {
-            var content = "requesting approval for all oldChimps";
-            $("#chimpspan").html(content);
-            oldChimpsNFT.methods.setApprovalForAll("0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026", true).send({ from: chimpers })
-            .then(function (receipt) {
-                console.log(receipt);
-                var content = "approved oldChimps!:)";
-                $("#chimpspan").html(content);
-            });;
-        }
-        
         document.getElementById('mint').onclick = async () => {
             var amount = $("#mintAmount").val();
             var content = "minting chimps";
@@ -36,18 +24,6 @@ document.getElementById('mmwallet').onclick = async () => {
                 $("chimpspan").html(content);
             });;
         }
-        
-        // remint nfts...
-        document.getElementById('remint').onclick = async () => {
-            var content = "requesting remint from: ";
-            content += chimpers;
-            $("#chimpspan").html(content);
-            chimpsNFT.methods.mintOwners().send({ from: chimpers, gasPrice: 258000000000 })
-            .then(function (receipt) {
-                console.log(receipt);
-                var content = "reminted 25 chimps!:) ";
-                $("#chimpspan").html(content);
-            });;
-        }
+        //
     }
 }
