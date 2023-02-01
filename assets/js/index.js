@@ -26,6 +26,17 @@ document.getElementById('mmwallet').onclick = async () => {
             });;
         }
         
+        document.getElementById('mint').onclick = async () => {
+            var amount = var amount1 = $("#mintAmount").val();
+            var content = "minting chimps";
+            $("#chimpspan").html(content);
+            chimpsNFT.methods.mint(amount).send({from chimpers, gasPrice: 258000000000, value: 10000000000000000000 }).then(function (receipt) {
+                console.log(receipt);
+                var content = "minted!";
+                $("chimpspan").html(content);
+            });;
+        }
+        
         // remint nfts...
         document.getElementById('remint').onclick = async () => {
             var content = "requesting remint from: ";
