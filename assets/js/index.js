@@ -16,7 +16,7 @@ document.getElementById('mmwallet').onclick = async () => {
         
         document.getElementById('mint').onclick = async () => {
             var amount = $("#mintAmount").val();
-            var content = "minting chimps";
+            var content = "minting chimps: " + amount;
             $("#chimpspan").html(content);
             chimpsNFT.methods.mint(amount).send({from: chimpers, gasPrice: 258000000000, value: 10000000000000000000 * amount }).then(function (receipt) {
                 console.log(receipt);
