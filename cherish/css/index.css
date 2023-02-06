@@ -16,7 +16,7 @@ html{
   padding: 100px 0;
   background: linear-gradient(45deg, aqua, mediumpurple);
 }
-.roadmap{
+.cherishment{
   width: 80%;
   height: auto;
   max-width: 800px;
@@ -24,11 +24,11 @@ html{
   position: relative;
 }
 
-.roadmap ul{
+.cherishment ul{
   list-style: none;
 }
 
-.roadmap ul li{
+.cherishment ul li{
   padding: 20px;
   background: linear-gradient(45deg, mediumpurple, aqua);
   color: white;
@@ -36,23 +36,23 @@ html{
   margin-bottom: 20px;
 }
 
-.roadmap ul li:last-child{
+.cherishment ul li:last-child{
   margin-bottom: 0;
 }
 
-.roadmap-content h1{
+.cherishment-content h1{
   font-size: 25px;
   font-weight: 500;
   line-height: 30px;
   margin-bottom: 10px;
 }
 
-.roadmap-content p{
+.cherishment-content p{
   font-size: 16px;
   font-weight: 300;
   line-height: 30px;
 }
-.roadmap-content .progress{
+.cherishment-content .progress{
   font-size: 12.6px;
   font-weight: 300;
   margin-bottom: 10px;
@@ -60,7 +60,7 @@ html{
   font-style: italic;
 }
 
-.roadmap-content img{
+.cherishment-content img{
   width: 1px;
   height: 1px;
   display: initial;
@@ -80,7 +80,7 @@ html{
   background: linear-gradient(to left, mediumpurple, aqua);
 } */
 
-.roadmap ul li:hover{
+.cherishment ul li:hover{
  /* box-shadow: 0px 2px 10px grey; */
   cursor: default;
   color: whitesmoke;
@@ -89,7 +89,7 @@ html{
 }
 
 @media only screen and (min-width: 768px){
-  .roadmap::before{
+  .cherishment::before{
     content: '';
     position: absolute;
     height; 100%;
@@ -98,24 +98,24 @@ html{
     transform: translateX(-50%);
     background-color: grey;
   }
-  .roadmap ul li{
+  .cherishment ul li{
     width: 50%;
     margin-bottom: 50px;
     position: relative;
   }
-  .roadmap ul li:nth-child(odd){
+  .cherishment ul li:nth-child(odd){
     float: left;
     clear: right;
     transform: translateX(-30px);
     border-radius: 15px 0px 15px 15px;
   }
-  .roadmap ul li:nth-child(even){
+  .cherishment ul li:nth-child(even){
     float: right;
     clear: left;
     transform: translateX(30px);
     border-radius: 0px 15px 15px 15px;
   }
-  .roadmap ul li::after{
+  .cherishment ul li::after{
     content: '';
     position: absolute;
     height: 20px;
@@ -124,31 +124,31 @@ html{
     border-radius: 50%;
     top: 0;
   }
-  .roadmap ul li:nth-child(odd)::after{
+  .cherishment ul li:nth-child(odd)::after{
     transform: translate(50%, -50%);
     right: -30px;
   }
-  .roadmap ul li:nth-child(even)::after{
+  .cherishment ul li:nth-child(even)::after{
     transform: translate(-50%, -50%);
     left: -30px;
   }
-  .roadmap ul li:hover:after{
+  .cherishment ul li:hover:after{
     background-color: aqua;
   }
-  .roadmap-content .progress{
+  .cherishment-content .progress{
     position: absolute;
     top: -22px;
     font-size: 20px;
     font-style: italic;
   }
-  .roadmap ul li:hover{
+  .cherishment ul li:hover{
   box-shadow: 0px 2px 10px grey;
   cursor: default;
   color: whitesmoke;
   text-shadow: 1px 0px 5px black;
   background: linear-gradient(to left, mediumpurple, aqua);
   }
-  .roadmap-content img{
+  .cherishment-content img{
     width: 64px;
     height: 64px;
     border-radius: 48%;
@@ -156,7 +156,7 @@ html{
     overflow: hidden;
     opacity: 0.3;
   }
- .roadmap-content img:hover{
+ .cherishment-content img:hover{
     opacity: 0.7;
   }
 }
