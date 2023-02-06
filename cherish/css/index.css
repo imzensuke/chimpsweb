@@ -119,6 +119,11 @@ button:hover{
   background: linear-gradient(45deg, mediumpurple, aqua);
 }
 
+fc{
+  cursor: pointer;
+  color: #FAD02C;
+}
+
 @media only screen and (min-width: 768px){
   .cherishment::before{
     content: '';
@@ -216,5 +221,9 @@ button:hover{
   *::selection{
   background: transparent;
   color: #FAD02C;
+  }
+  fc{
+    cursor: pointer;
+    color: #FAD02C;
   }
 }
