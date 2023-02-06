@@ -173,7 +173,6 @@ button{
   box-shadow: 0px 2px 10px grey;
   cursor: default;
   color: black; /* whitesmoke */
-  text-shadow: 1px 0px 5px black;
   background: linear-gradient(to left, mediumpurple, aqua);
   }
   .cherishment-content img{
