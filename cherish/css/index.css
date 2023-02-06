@@ -35,7 +35,7 @@ html::selection{
 .cherishment ul li{
   padding: 20px;
   background: linear-gradient(45deg, mediumpurple, aqua);
-  color: white;
+  color: black;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -87,7 +87,7 @@ html::selection{
 .cherishment ul li:hover{
  /* box-shadow: 0px 2px 10px grey; */
   cursor: default;
-  color: whitesmoke;
+  color: black; /* whitesmoke */
   text-shadow: 1px 0px 5px black;
   background: linear-gradient(to left, mediumpurple, aqua);
 }
@@ -172,7 +172,7 @@ button{
   .cherishment ul li:hover{
   box-shadow: 0px 2px 10px grey;
   cursor: default;
-  color: whitesmoke;
+  color: black; /* whitesmoke */
   text-shadow: 1px 0px 5px black;
   background: linear-gradient(to left, mediumpurple, aqua);
   }
