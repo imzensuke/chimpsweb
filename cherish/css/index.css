@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection{
+  background: transparent;
+  color: #FAD02C;
+}
 html{
   font-family: 'Coming Soon', monospace;
 }
@@ -208,5 +212,9 @@ button:hover{
 
   button:hover{
     background: linear-gradient(45deg, mediumpurple, aqua);
+  }
+  *::selection{
+  background: transparent;
+  color: #FAD02C;
   }
 }
