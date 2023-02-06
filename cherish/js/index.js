@@ -12,8 +12,10 @@ document.getElementById('mmwallet').onclick = async () => {
         console.log(chimpers);
         document.getElementById('addy').textContent = chimpers;
         chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, chimpsAddress);
-        var cherishedNFT = chimpsNFT.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call();
-        document.getElementById('tchimp').textContent = cherishedNFT;
+        var cherishedNFT = chimpsNFT.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+            .then(function (result) {
+                document.getElementById('tchimp').textContent = result;
+            });
         //
     }
 }
