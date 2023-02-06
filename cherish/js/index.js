@@ -10,7 +10,7 @@ document.getElementById('mmwallet').onclick = async () => {
         chimpers = accounts[0];
         document.getElementById('mmwallet').textContent = "Connected";
         console.log(chimpers);
-        // document.getElementById('addy').textContent = chimpers;
+         document.getElementById('addy').textContent = chimpers;
         // chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, chimpsAddress);
         //
     }
