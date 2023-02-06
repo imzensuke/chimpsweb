@@ -88,6 +88,10 @@ html{
   background: linear-gradient(to left, mediumpurple, aqua);
 }
 
+hr{
+  margin-bottom: 8px;
+}
+
 @media only screen and (min-width: 768px){
   .cherishment::before{
     content: '';
@@ -158,5 +162,9 @@ html{
   }
  .cherishment-content img:hover{
     opacity: 0.7;
+  }
+  
+  hr{
+  margin-bottom: 8px;
   }
 }
