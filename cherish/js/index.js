@@ -39,7 +39,16 @@ document.getElementById('mmwallet').onclick = async () => {
             });
         
         document.getElementById('cherishChimp').onclick = async () => {
-        }
+            var tokenId = $("#cnftid").val();
+            var content = "Joining..Cherishment TreeHouse";
+            document.getElementById('cherishChimp').textContent = content;
+            var event = treeHouse.methods.startCherish(tokenId).send({ from: chimpers, value: 100000000000000000 })
+                .then(function (receipt) {
+                    console.log(receipt);
+                    var content = "Joined Cherishment TreeHouse!";
+                    document.getElementById('cherishChimp').textContent = content;
+                });;
+        };
         
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
