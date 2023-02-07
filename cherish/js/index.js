@@ -38,5 +38,7 @@ document.getElementById('mmwallet').onclick = async () => {
                 document.getElementById('wchimp').textContent = result;
             });
         
+    }else{
+        document.getElementById('mmwallet').textContent = "Failed! :<";
     }
 }
