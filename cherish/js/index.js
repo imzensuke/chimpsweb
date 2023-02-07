@@ -3,7 +3,7 @@ var contract = null;
 const chimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
 const treeHouseAddress = "0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42";
 const wwDOGEAddress = "0xB7ddC6414bf4F5515b52D8BdD69973Ae205ff101";
-const cherishedChimpsAddress = "0xccf3f232bE95B316040b49C3AFbFD73d5B83E61c";
+const cherishedChimpsAddress = "0x58AD22348216bdb0A3a544Ad365eE82187D0E8aa";
 
 document.getElementById('mmwallet').onclick = async () => {
     if (window.ethereum){
