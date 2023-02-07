@@ -1,7 +1,7 @@
 var chimpers = null;
 var contract = null;
 const chimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
-const treeHouseAddress = "0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42";
+const treeHouseAddress = "0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691";
 const wwDOGEAddress = "0xB7ddC6414bf4F5515b52D8BdD69973Ae205ff101";
 const cherishedChimpsAddress = "0x58AD22348216bdb0A3a544Ad365eE82187D0E8aa";
 
@@ -19,17 +19,17 @@ document.getElementById('mmwallet').onclick = async () => {
         cchimps = new web3.eth.Contract(ccABI, cherishedChimpsAddress);
         treeHouse = new web3.eth.Contract(treeHouseAbi, treeHouseAddress);
         
-        var cherishedNFT = chimpsNFT.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+        var cherishedNFT = chimpsNFT.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
             .then(function (result) {
                 document.getElementById('tchimp').textContent = result;
             });
         //
-       var treeHouseBal = wwDOGE.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+       var treeHouseBal = wwDOGE.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
            .then(function (result) {
                 document.getElementById('thb').textContent = result;
             });
         
-        var customerChimps = cchimps.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+        var customerChimps = cchimps.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
             .then(function (result) {
                 document.getElementById('cchimp').textContent = result;
             });
