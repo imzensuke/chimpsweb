@@ -38,6 +38,9 @@ document.getElementById('mmwallet').onclick = async () => {
                 document.getElementById('wchimp').textContent = result;
             });
         
+        document.getElementById('cherishChimp').onclick = async () => {
+        }
+        
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
         document.getElementById('cherishChimp').textContent = "Metamask Required! :<";
