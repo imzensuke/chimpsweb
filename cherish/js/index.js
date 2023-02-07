@@ -19,7 +19,7 @@ document.getElementById('mmwallet').onclick = async () => {
                 document.getElementById('tchimp').textContent = result;
             });
         //
-       car treeHouseBal = wwDOGE.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+       var treeHouseBal = wwDOGE.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
            .then(function (result) {
                 document.getElementById('thb').textContent = result;
             });
