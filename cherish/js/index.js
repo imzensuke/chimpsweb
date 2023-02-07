@@ -31,7 +31,7 @@ document.getElementById('mmwallet').onclick = async () => {
         
         var customerChimps = cchimps.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
             .then(function (result) {
-                document.getElementById('').textContent = result;
+                document.getElementById('cchimp').textContent = result;
             });
         var chimpsInWallet = chimpsNFT.methods.balanceOf(chimpers).call({ from: chimpers })
             .then(function (result) {
