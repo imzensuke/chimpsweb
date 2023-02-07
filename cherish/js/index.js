@@ -40,5 +40,6 @@ document.getElementById('mmwallet').onclick = async () => {
         
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
+        document.getElementById('cherishChimp').textContent = "Metamask Required! :<";
     }
 }
