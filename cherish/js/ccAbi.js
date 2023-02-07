@@ -1,4 +1,4 @@
-const ccAbi = [
+const ccABI = [
 	{
 		"inputs": [
 			{
