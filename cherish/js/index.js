@@ -1,6 +1,7 @@
 var chimpers = null;
 var contract = null;
 const chimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
+const wwDOGEAddress = "0xB7ddC6414bf4F5515b52D8BdD69973Ae205ff101";
 
 document.getElementById('mmwallet').onclick = async () => {
     if (window.ethereum){
@@ -12,10 +13,15 @@ document.getElementById('mmwallet').onclick = async () => {
         console.log(chimpers);
         document.getElementById('addy').textContent = chimpers;
         chimpsNFT = new web3.eth.Contract(chimpsNFTAbi, chimpsAddress);
+        wwDOGE = new web3.eth.Contract(wwDOGEABI, wwDOGEAddress);
         var cherishedNFT = chimpsNFT.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
             .then(function (result) {
                 document.getElementById('tchimp').textContent = result;
             });
         //
+       car treeHouseBal = wwDOGE.methods.balanceOf("0xA9c5Cc3CA2723136CbFe61f2256d05946F2fbe42").call({ from: chimpers })
+           .then(function (result) {
+                document.getElementById('thb').textContent = result;
+            });
     }
 }
