@@ -142,7 +142,8 @@ document.getElementById('mmwallet').onclick = async () => {
         .then(function (result) {
     var event = cchimps.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
-    content = " Id: " + result + ", ";
+            var content = "";
+    content += " Id: " + result + ", ";
     document.getElementById('fchimp').textContent = content;
     });
     });
