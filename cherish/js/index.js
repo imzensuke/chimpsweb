@@ -75,6 +75,7 @@ document.getElementById('mmwallet').onclick = async () => {
         };
         
         document.getElementById('claimRewards').onclick = async () => {
+            if (treeHouseBal > 1){
             var tokenId = $("#mgChimp").val();
             var content = "Verifing Income...";
             document.getElementById('claimRewards').textContent = content;
@@ -85,6 +86,10 @@ document.getElementById('mmwallet').onclick = async () => {
                     document.getElementById('claimRewards').textContent = content;
                 });;
         };
+        }else{
+            var content = "Insufficient Funds";
+            document.getElementById('claimRewards').textContent = content;
+        }
         
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
