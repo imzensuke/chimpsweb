@@ -76,19 +76,19 @@ document.getElementById('mmwallet').onclick = async () => {
         
         document.getElementById('claimRewards').onclick = async () => {
             if (treeHouseBal > 1){
-            var tokenId = $("#mgChimp").val();
-            var content = "Verifing Income...";
-            document.getElementById('claimRewards').textContent = content;
-            var event = treeHouse.methods.incomeOfChimp(tokenId).send({ from: chimpers })
-                .then(function (receipt) {
-                    console.log(receipt);
-                    var content = "Claimed!";
-                    document.getElementById('claimRewards').textContent = content;
-                });;
-        };
-        }else{
-            var content = "Insufficient Funds";
-            document.getElementById('claimRewards').textContent = content;
+                var tokenId = $("#mgChimp").val();
+                var content = "Verifing Income...";
+                document.getElementById('claimRewards').textContent = content;
+                var event = treeHouse.methods.incomeOfChimp(tokenId).send({ from: chimpers })
+                    .then(function (receipt) {
+                        console.log(receipt);
+                        var content = "Claimed!";
+                        document.getElementById('claimRewards').textContent = content;
+                    });;
+            }else{
+                var content = "Insufficient Funds";
+                document.getElementById('claimRewards').textContent = content;
+            };
         }
         
     }else{
