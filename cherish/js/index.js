@@ -48,6 +48,11 @@ document.getElementById('mmwallet').onclick = async () => {
                 document.getElementById('currPool').textContent = "PartyPool: " + content;
             });
         
+        var currnMultiplier = cherishPool.methods.multiplier().call({ from: chimpers })
+            .then(function (result) {
+                document.getElementById('multiplier').textContent = "PoolMultiplier: " + result + "x";
+            });
+        
         document.getElementById('currPool').onclick = async () => {
             var content = "Loading Pool Value:";
             document.getElementById('currPool').textContent = content;
