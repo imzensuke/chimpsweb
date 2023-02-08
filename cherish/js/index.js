@@ -47,6 +47,25 @@ document.getElementById('mmwallet').onclick = async () => {
                 document.getElementById('currPool').textContent = "PartyPool: " + result;
             });
         
+        document.getElementById('currPool').onclick = async () => {
+            var content = "Loading Pool Value:";
+            document.getElementById('currPool').textContent = content;
+            var event = cherishPool.methods.calculatePool().call({ from: chimpers })
+                .then(function (result) {
+                    document.getElementById('currPool').textContent = "PartyPool: " + result;
+                });;
+        };
+        
+        document.getElementById('claimCrrPool').onclick = async () => {
+            var content = "Verifing..";
+            document.getElementById('claimCrrPool').textContent = content;
+            var event = cherishPool.methods.cherisherClaim().send({ from: chimpers })
+                .then(function (result) {
+                    var content = "Claimed Extra Wages!";
+                    document.getElementById('claimCrrPool').textContent = content;
+                });;
+        };
+        
         
         document.getElementById('approveAll').onclick = async () => {
             var content = "Allowing Chimps..";
