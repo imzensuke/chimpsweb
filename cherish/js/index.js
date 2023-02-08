@@ -101,8 +101,6 @@ document.getElementById('mmwallet').onclick = async () => {
             };
         
         document.getElementById('fchimp').onclick = async () => {
-            var content = "Refresh";
-            document.getElementById('fchimp').textContent = content;
         var event = cchimp.methods.balanceOf(chimpers).call({ from: chimpers })
         .then(function (result) {
     balance = result;
