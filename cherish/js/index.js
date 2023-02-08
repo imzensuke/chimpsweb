@@ -97,7 +97,7 @@ document.getElementById('mmwallet').onclick = async () => {
                 var tokenId = $("#mgChimp").val();
                 var content = "Leaving TreeHouse..";
                 document.getElementById('unCherish').textContent = content;
-                var event treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
+                var event = treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
                     .then(function (receipt) {
                         console.log(receipt);
                         var content = "Left! :<";
