@@ -75,7 +75,7 @@ document.getElementById('mmwallet').onclick = async () => {
         };
         
         document.getElementById('claimRewards').onclick = async () => {
-            if (treeHouseBal > 1){
+            if (treeHouseBal >= 1){
                 var tokenId = $("#mgChimp").val();
                 var content = "Verifing Income...";
                 document.getElementById('claimRewards').textContent = content;
@@ -92,7 +92,7 @@ document.getElementById('mmwallet').onclick = async () => {
         }
         
         document.getElementById('unCherish').onclick = async () => {
-            if(treeHouseBal > 1){
+            if(treeHouseBal >= 1){
                 // it is 1+
                 var tokenId = $("#mgChimp").val();
                 var content = "Leaving TreeHouse..";
