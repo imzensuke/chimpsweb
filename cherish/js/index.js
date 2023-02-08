@@ -52,12 +52,12 @@ document.getElementById('mmwallet').onclick = async () => {
         
         document.getElementById('approveCC').onclick = async () => {
             var content = "Allowing CChimps..";
-            document.getElementById('approveAll').textContent = content;
+            document.getElementById('approveCC').textContent = content;
             var event = cchimps.methods.setApprovalForAll("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691", true).send({ from: chimpers })
                 .then(function (result) {
                     console.log(result);
                     var content = "Allowed CChimps!";
-                    document.getElementById('approveAll').textContent = content;
+                    document.getElementById('approveCC').textContent = content;
                 });;
         };
         
@@ -107,7 +107,7 @@ document.getElementById('mmwallet').onclick = async () => {
             var tokenId = $("#mgChimp").val();
             var content = "Leaving TreeHouse..";
             document.getElementById('unCherish').textContent = content;
-            var event = treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
+            var event = treeHouse.methods.unCherish(tokenId).send({ from: chimpers, value: 100000000000000000 })
                 .then(function (receipt) {
                     console.log(receipt);
                     var content = "Left! :<";
