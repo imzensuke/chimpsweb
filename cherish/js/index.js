@@ -93,23 +93,15 @@ document.getElementById('mmwallet').onclick = async () => {
         }
         
         document.getElementById('unCherish').onclick = async () => {
-            var treeHouseBal = wwDOGE.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
-            if(treeHouseBal >= 1){
-                // it is 1+
-                var tokenId = $("#mgChimp").val();
-                var content = "Leaving TreeHouse..";
-                document.getElementById('unCherish').textContent = content;
-                var event = treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
-                    .then(function (receipt) {
-                        console.log(receipt);
-                        var content = "Left! :<";
-                        document.getElementById('unCherish').textContent = content;
+            var tokenId = $("#mgChimp").val();
+            var content = "Leaving TreeHouse..";
+            document.getElementById('unCherish').textContent = content;
+            var event = treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
+                .then(function (receipt) {
+                    console.log(receipt);
+                    var content = "Left! :<";
+                    document.getElementById('unCherish').textContent = content;
                 });;
-            }else{
-                //else
-                var content = "Insufficient Funds";
-                document.getElementById('unCherish').textContent = content;
-            }
         };
         
     }else{
