@@ -62,13 +62,14 @@ document.getElementById('mmwallet').onclick = async () => {
         };
         
         document.getElementById('viewRewards').onclick = async () => {
-            var tokenId = $().val();
+            var tokenId = $("mgChimp").val();
             var content = "Calculating income..";
             document.getElementById('viewRewards').textContent = content;
             var event = treeHouse.methods.calculateIncome(tokenId).send({ from: chimpers })
                 .then(function (receipt) {
                     console.log(receipt);
-                    var content = "Income: " + receipt;
+                    var content = "wwDOGE Income: ";
+                    content += JSON.stringify(receipt.toString() / 1000000000000000000);
                     document.getElementById('viewRewards').textContent = content;
                 });;
         };
