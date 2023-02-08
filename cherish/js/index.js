@@ -65,7 +65,7 @@ document.getElementById('mmwallet').onclick = async () => {
             var tokenId = $("mgChimp").val();
             var content = "Calculating income..";
             document.getElementById('viewRewards').textContent = content;
-            var event = treeHouse.methods.calculateIncome(tokenId).send({ from: chimpers })
+            var event = treeHouse.methods.calculateIncome(tokenId).call({ from: chimpers })
                 .then(function (receipt) {
                     console.log(receipt);
                     var content = "wwDOGE Income: ";
