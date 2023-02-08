@@ -50,6 +50,17 @@ document.getElementById('mmwallet').onclick = async () => {
                 });;
         };
         
+        document.getElementById('approveCC').onclick = async () => {
+            var content = "Allowing CChimps..";
+            document.getElementById('approveAll').textContent = content;
+            var event = cchimps.methods.setApprovalForAll("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691", true).send({ from: chimpers })
+                .then(function (result) {
+                    console.log(result);
+                    var content = "Allowed CChimps!";
+                    document.getElementById('approveAll').textContent = content;
+                });;
+        };
+        
         document.getElementById('cherishChimp').onclick = async () => {
             var tokenId = $("#cnftid").val();
             var content = "Joining..Cherishment TreeHouse";
