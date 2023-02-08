@@ -61,6 +61,18 @@ document.getElementById('mmwallet').onclick = async () => {
                 });;
         };
         
+        document.getElementById('viewRewards').onclick = async () => {
+            var tokenId = $().val();
+            var content = "Calculating income..";
+            document.getElementById('viewRewards').textContent = content;
+            var event = treeHouse.methods.calculateIncome(tokenId).send({ from: chimpers })
+                .then(function (receipt) {
+                    console.log(receipt);
+                    var content = "Income: " + receipt;
+                    document.getElementById('viewRewards').textContent = content;
+                });;
+        };
+        
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
         document.getElementById('cherishChimp').textContent = "Metamask Required! :<";
