@@ -42,6 +42,11 @@ document.getElementById('mmwallet').onclick = async () => {
             .then(function (result) {
                 document.getElementById('wchimp').textContent = result;
             });
+        var currnPool = cherishPool.methods.calculatePool().call({ from: chimpers })
+            .then(function (result) {
+                document.getElementById('currPool').textContent = "PartyPool: " + result;
+            });
+        
         
         document.getElementById('approveAll').onclick = async () => {
             var content = "Allowing Chimps..";
