@@ -91,6 +91,25 @@ document.getElementById('mmwallet').onclick = async () => {
             };
         }
         
+        document.getElementById('unCherish').onclick = async () => {
+            if(treeHouseBal > 1){
+                // it is 1+
+                var tokenId = $("#mgChimp").val();
+                var content = "Leaving TreeHouse..";
+                document.getElementById('unCherish').textContent = content;
+                var event treeHouse.methods.unCherish(tokenId).send({ from: chimpers })
+                    .then(function (receipt) {
+                        console.log(receipt);
+                        var content = "Left! :<";
+                        document.getElementById('unCherish').textContent = content;
+                });;
+            }else{
+                //else
+                var content = "Insufficient Funds";
+                document.getElementById('unCherish').textContent = content;
+            }
+        };
+        
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
         document.getElementById('cherishChimp').textContent = "Metamask Required! :<";
