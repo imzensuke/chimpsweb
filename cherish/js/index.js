@@ -27,8 +27,9 @@ document.getElementById('mmwallet').onclick = async () => {
        var treeHouseBal = wwDOGE.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
            .then(function (result) {
                var content = JSON.stringify(result.toString() / 1000000000000000000);
-                content += " wwDOGE";
-                document.getElementById('thb').textContent = content;
+               var contente = Number(content).toFixed(3);
+                contente += " wwDOGE";
+                document.getElementById('thb').textContent = contente;
             });
         
         var customerChimps = cchimps.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
