@@ -134,6 +134,7 @@ document.getElementById('mmwallet').onclick = async () => {
             };
         
         document.getElementById('fchimp').onclick = async () => {
+            var content = "";
         var event = cchimps.methods.balanceOf(chimpers).call({ from: chimpers })
         .then(function (result) {
     balance = result;
@@ -143,7 +144,7 @@ document.getElementById('mmwallet').onclick = async () => {
     var event = cchimps.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
             var content = "";
-    content += " Id: " + result + ", ";
+    content += " Id: " + result;
     document.getElementById('fchimp').textContent = "Refresh";
             $("#fchimp2").html(content);
     });
