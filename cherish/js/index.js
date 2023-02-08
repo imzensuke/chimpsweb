@@ -100,6 +100,25 @@ document.getElementById('mmwallet').onclick = async () => {
                     });;
             };
         
+        document.getElementById('fchimp').onclick = async () => {
+            var content = "Refresh";
+            document.getElementById('fchimp').textContent = content;
+        var event = cchimp.methods.balanceOf(chimpers).call({ from: chimpers })
+        .then(function (result) {
+    balance = result;
+    for(var i = 0; i < balance; i++){
+    var event = cchimp.methods.tokenOfOwnerByIndex(chimpers, i).call({ from: chimpers })
+        .then(function (result) {
+    var event = cchimp.methods.tokenURI(Number(result)).call()
+        .then(function (result1) {
+    content += "<br>Id: " + result;
+    document.getElementById('fchimp').textContent = content;
+    });
+    });
+    };
+    });
+        };
+        
         document.getElementById('unCherish').onclick = async () => {
             var tokenId = $("#mgChimp").val();
             var content = "Leaving TreeHouse..";
