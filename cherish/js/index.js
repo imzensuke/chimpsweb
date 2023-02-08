@@ -74,6 +74,18 @@ document.getElementById('mmwallet').onclick = async () => {
                 });;
         };
         
+        document.getElementById('claimRewards').onclick = async () => {
+            var tokenId = $("#mgChimp").val();
+            var content = "Verifing Income...";
+            document.getElementById('claimRewards').textContent = content;
+            var event = treeHouse.methods.incomeOfChimp(tokenId).send({ from: chimpers })
+                .then(function (receipt) {
+                    console.log(receipt);
+                    var content = "Claimed!";
+                    document.getElementById('claimRewards').textContent = content;
+                });;
+        };
+        
     }else{
         document.getElementById('mmwallet').textContent = "Failed! :<";
         document.getElementById('cherishChimp').textContent = "Metamask Required! :<";
