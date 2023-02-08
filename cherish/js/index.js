@@ -44,7 +44,8 @@ document.getElementById('mmwallet').onclick = async () => {
             });
         var currnPool = cherishPool.methods.calculatePool().call({ from: chimpers })
             .then(function (result) {
-                document.getElementById('currPool').textContent = "PartyPool: " + result;
+                var content = JSON.stringify(result.toString() / 1000000000000000000);
+                document.getElementById('currPool').textContent = "PartyPool: " + content;
             });
         
         document.getElementById('currPool').onclick = async () => {
@@ -52,7 +53,8 @@ document.getElementById('mmwallet').onclick = async () => {
             document.getElementById('currPool').textContent = content;
             var event = cherishPool.methods.calculatePool().call({ from: chimpers })
                 .then(function (result) {
-                    document.getElementById('currPool').textContent = "PartyPool: " + result;
+                    var content = JSON.stringify(result.toString() / 1000000000000000000);
+                    document.getElementById('currPool').textContent = "PartyPool: " + content;
                 });;
         };
         
