@@ -144,7 +144,8 @@ document.getElementById('mmwallet').onclick = async () => {
         .then(function (result1) {
             var content = "";
     content += " Id: " + result + ", ";
-    document.getElementById('fchimp').textContent = content;
+    document.getElementById('fchimp').textContent = "Refresh";
+            $("#fchimp2").html(content);
     });
     });
     };
