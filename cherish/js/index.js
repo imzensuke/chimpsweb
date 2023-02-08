@@ -4,6 +4,7 @@ const chimpsAddress = "0xfb035Ab15A174F6c0702901e7b2A24DB8f8cD026";
 const treeHouseAddress = "0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691";
 const wwDOGEAddress = "0xB7ddC6414bf4F5515b52D8BdD69973Ae205ff101";
 const cherishedChimpsAddress = "0x58AD22348216bdb0A3a544Ad365eE82187D0E8aa";
+const cherishPoolAddress = "0x4fE2e898cFC9E26d2F73B2111b5cdca4105989A9";
 
 document.getElementById('mmwallet').onclick = async () => {
     if (window.ethereum){
@@ -18,6 +19,7 @@ document.getElementById('mmwallet').onclick = async () => {
         wwDOGE = new web3.eth.Contract(wwDOGEABI, wwDOGEAddress);
         cchimps = new web3.eth.Contract(ccABI, cherishedChimpsAddress);
         treeHouse = new web3.eth.Contract(treeHouseAbi, treeHouseAddress);
+        cherishPool = new web3.eth.Contract(cherishPoolAbi, cherishPoolAddress);
         
         var cherishedNFT = chimpsNFT.methods.balanceOf("0x8f1C648d3e2F9f8DeC269397f288DA5c2A73c691").call({ from: chimpers })
             .then(function (result) {
