@@ -135,6 +135,10 @@ input{
   margin-bottom: 5px;
 }
 
+#imagee {
+float: left;
+}
+
 a{
  text-decoration: none;
 }
